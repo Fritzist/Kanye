@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTG</title>
+    <style>
+
+        .container {
+            position: relative;
+            display: inline-block;
+            
+        }
+
+        .shown {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            color: rgb(164, 179, 179);
+        }
+
+        .container:hover .shown {
+            opacity: 1;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+        }
+
+        .container:hover img {
+            filter: blur(5px);
+            transition: filter 0.5s ease-in-out;
+        }
+
+        .container .shown img:not(:hover) {
+            filter: blur(0px);
+            transition: filter 0.5s ease-in-out;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <img src="img/kanaye_kkk.png" alt="">
+        <h1 class="shown">KTG</h1>
+    </div>
+</body>
+</html>
